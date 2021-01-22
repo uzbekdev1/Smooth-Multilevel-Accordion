@@ -9,13 +9,26 @@
 @section Styles
 {
     <style>
-        .list-group {
-            flex-direction: column !important;
+        #sidebar1 {
+            flex-direction: column;
         }
 
-        .list-group-item.active a {
-            color: white;
-        }
+            #sidebar1 .list-group-item {
+                border: none;
+            }
+
+                #sidebar1 .list-group-item a {
+                    color: #212529;
+                }
+
+                #sidebar1 .list-group-item.selected {
+                    text-decoration: underline;
+                }
+
+                    #sidebar1 .list-group-item.selected a {
+                        font-weight: 600;
+                        color: #007bff;
+                    }
     </style>
 }
 
@@ -34,23 +47,23 @@
                         <li class="list-group-item">
                             <a data-toggle="collapse" href="#collapse1_1" role="button" aria-expanded="@(route=="11"?"true":"")" aria-controls="collapse1_1">
                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                Controller1 
+                                Controller1
                             </a>
                             <div class="collapse @(route=="11"?"show":"")" id="collapse1_1">
                                 <ul class="list-group list-group-flush mt-1">
-                                    <li class="list-group-item @(child=="111"?"active":"")">
+                                    <li class="list-group-item @(child=="111"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=1,route=11,child=111})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action1
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="112"?"active":"")">
+                                    <li class="list-group-item @(child=="112"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=1,route=11,child=112})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action2
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="113"?"active":"")">
+                                    <li class="list-group-item @(child=="113"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=1,route=11,child=113})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action3
@@ -67,19 +80,19 @@
                             </a>
                             <div class="collapse @(route=="12"?"show":"")" id="collapse1_2">
                                 <ul class="list-group list-group-flush mt-1">
-                                    <li class="list-group-item @(child=="121"?"active":"")">
+                                    <li class="list-group-item @(child=="121"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=1,route=12,child=121})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action1
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="122"?"active":"")">
+                                    <li class="list-group-item @(child=="122"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=1,route=12,child=122})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action2
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="123"?"active":"")">
+                                    <li class="list-group-item @(child=="123"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=1,route=12,child=123})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action3
@@ -96,19 +109,19 @@
                             </a>
                             <div class="collapse @(route=="13"?"show":"")" id="collapse1_3">
                                 <ul class="list-group list-group-flush  mt-1">
-                                    <li class="list-group-item @(child=="131"?"active":"")">
+                                    <li class="list-group-item @(child=="131"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=1,route=13,child=131})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action1
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="122"?"active":"")">
+                                    <li class="list-group-item @(child=="132"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=1,route=13,child=132})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action2
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="133"?"active":"")">
+                                    <li class="list-group-item @(child=="133"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=1,route=13,child=133})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action3
@@ -137,19 +150,19 @@
                             </a>
                             <div class="collapse @(route=="21"?"show":"")" id="collapse2_1">
                                 <ul class="list-group list-group-flush mt-1">
-                                    <li class="list-group-item @(child=="211"?"active":"")">
+                                    <li class="list-group-item @(child=="211"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=2,route=21,child=211})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action1
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="212"?"active":"")">
+                                    <li class="list-group-item @(child=="212"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=2,route=21,child=212})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action2
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="213"?"active":"")">
+                                    <li class="list-group-item @(child=="213"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=2,route=21,child=213})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action3
@@ -166,19 +179,19 @@
                             </a>
                             <div class="collapse @(route=="22"?"show":"")" id="collapse2_2">
                                 <ul class="list-group list-group-flush mt-1">
-                                    <li class="list-group-item @(child=="221"?"active":"")">
+                                    <li class="list-group-item @(child=="221"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=2,route=22,child=221})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action1
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="222"?"active":"")">
+                                    <li class="list-group-item @(child=="222"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=2,route=22,child=222})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action2
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="223"?"active":"")">
+                                    <li class="list-group-item @(child=="223"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=2,route=22,child=223})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action3
@@ -195,19 +208,19 @@
                             </a>
                             <div class="collapse @(route=="23"?"show":"")" id="collapse2_3">
                                 <ul class="list-group list-group-flush  mt-1">
-                                    <li class="list-group-item @(child=="231"?"active":"")">
+                                    <li class="list-group-item @(child=="231"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=2,route=23,child=231})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action1
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="232"?"active":"")">
+                                    <li class="list-group-item @(child=="232"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=2,route=23,child=232})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action2
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="233"?"active":"")">
+                                    <li class="list-group-item @(child=="233"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=2,route=23,child=233})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action3
@@ -236,19 +249,19 @@
                             </a>
                             <div class="collapse @(route=="31"?"show":"")" id="collapse3_1">
                                 <ul class="list-group list-group-flush mt-1">
-                                    <li class="list-group-item @(child=="311"?"active":"")">
+                                    <li class="list-group-item @(child=="311"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=3,route=31,child=311})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action1
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="312"?"active":"")">
+                                    <li class="list-group-item @(child=="312"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=3,route=31,child=312})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action2
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="313"?"active":"")">
+                                    <li class="list-group-item @(child=="313"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=3,route=31,child=313})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action3
@@ -265,19 +278,19 @@
                             </a>
                             <div class="collapse @(route=="32"?"show":"")" id="collapse3_2">
                                 <ul class="list-group list-group-flush mt-1">
-                                    <li class="list-group-item @(child=="321"?"active":"")">
+                                    <li class="list-group-item @(child=="321"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=3,route=32,child=321})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action1
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="322"?"active":"")">
+                                    <li class="list-group-item @(child=="322"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=3,route=32,child=322})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action2
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="323"?"active":"")">
+                                    <li class="list-group-item @(child=="323"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=3,route=32,child=323})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action3
@@ -294,19 +307,19 @@
                             </a>
                             <div class="collapse @(route=="33"?"show":"")" id="collapse3_3">
                                 <ul class="list-group list-group-flush  mt-1">
-                                    <li class="list-group-item @(child=="331"?"active":"")">
+                                    <li class="list-group-item @(child=="331"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=3,route=33,child=331})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action1
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="332"?"active":"")">
+                                    <li class="list-group-item @(child=="332"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=3,route=33,child=332})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action2
                                         </a>
                                     </li>
-                                    <li class="list-group-item @(child=="333"?"active":"")">
+                                    <li class="list-group-item @(child=="333"?"selected":"")">
                                         <a href="@Url.Action("Index",new{module=3,route=33,child=333})">
                                             <i class="fa fa-file-o" aria-hidden="true"></i>
                                             Action3
